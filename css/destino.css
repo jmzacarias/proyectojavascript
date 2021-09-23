@@ -1,0 +1,422 @@
+@charset "UTF-8";
+/*Reseteo de CSS*/
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  color: #352D39; }
+
+/*Estilo de body*/
+body {
+  background-color: #A0673C; }
+
+main {
+  background-color: #DEE8D5;
+  background-image: linear-gradient(315deg, #544233 0%, #DEE8D5 85%); }
+
+footer {
+  background-color: #A0673C;
+  height: fit-content; }
+
+/*Centrar Texto*/
+.centrarTexto {
+  text-align: center; }
+
+/*Alinear a la derecha*/
+.alinearDerecha {
+  text-align: right;
+  margin-right: 2%; }
+
+/*Alinear a la izquierda*/
+.alinearIzquierda {
+  text-align: left; }
+
+/*Estilo fuente*/
+.cursiva {
+  font-style: italic; }
+
+/*Alineación H1 centrado*/
+h1 {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 80px; }
+
+/*Tamaño H2*/
+h2 {
+  text-align: center;
+  font-size: 64px;
+  text-decoration: none;
+  margin-top: 30px;
+  margin-bottom: 15px; }
+
+h3 {
+  font-size: 40px;
+  text-decoration: none;
+  margin-top: 30px;
+  margin-bottom: 15px; }
+
+/*Tamaño fuente footer*/
+footer {
+  font-size: small; }
+
+/*font family*/
+* {
+  font-family: 'Julius Sans One', sans-serif;
+  font-style: normal; }
+
+.estiloUshuaia {
+  margin: 15px; }
+
+.estiloCalafate {
+  margin: 15px;
+  padding-bottom: 30px; }
+
+.estiloTalampaya {
+  margin: 15px;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
+/*Header*/
+.grid-header {
+  display: grid;
+  grid-template-areas: "logo . redes"
+ "logo . ."
+ "logo menu .";
+  /*Iconos redes sociales*/ }
+  .grid-header .logo {
+    grid-area: logo; }
+  .grid-header .redesSociales {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    margin-right: 5px;
+    justify-content: right;
+    grid-area: redes; }
+  .grid-header nav {
+    grid-area: menu;
+    justify-self: center;
+    align-self: end;
+    position: absolute; }
+
+.logoRedes {
+  width: 35px;
+  height: 35px;
+  border-radius: 30%;
+  padding: 1px;
+  transition: height 1s width 1s; }
+
+/*Menu Escritorio*/
+.estiloMenu {
+  color: #DEE8D5;
+  display: flex;
+  justify-content: center; }
+
+ul li a {
+  color: #DEE8D5;
+  text-decoration: none; }
+
+ul li {
+  display: inline-block;
+  padding: 10px 10px 10px 10px;
+  border-right: solid 1px; }
+
+/*Menu Mobile*/
+.menuResponsive {
+  /*clase para menu en cel*/
+  color: #DEE8D5;
+  display: flex;
+  justify-content: left;
+  margin: 5px;
+  grid-area: pestaniaMenu; }
+
+header section ul ul {
+  /*esconder menu original en cel*/
+  position: absolute;
+  display: none;
+  background-color: #A0673C; }
+
+header section ul ul li {
+  display: block;
+  border-left: solid 1px;
+  border-bottom: solid 1px; }
+
+header section ul:hover ul {
+  /*mostrar menu original en cel en columna*/
+  display: block; }
+
+header section ul ul li a {
+  color: #DEE8D5;
+  text-decoration: none; }
+
+header section ul ul li {
+  padding: 10px 10px 10px 10px;
+  border-right: solid 1px; }
+
+.carrouselImagenes {
+  margin-right: 2%;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 50%; }
+
+section div div img {
+  border-radius: 3%; }
+
+.rutaCarrousel {
+  display: flex;
+  flex-direction: row; }
+
+#quitarBorde {
+  border-right: none; }
+
+/*Estilo texto Ruta*/
+.textoRuta {
+  padding-bottom: 30px; }
+
+.mapaSitio {
+  margin-left: 2%;
+  display: flex;
+  flex-direction: column;
+  width: 50%; }
+
+/*Estilo Tabla Itinerario*/
+.estiloTabla {
+  background-image: url("../imagenes/DSC_0187.JPG");
+  background-size: cover;
+  font-size: smaller;
+  color: bisque; }
+
+.estiloParrafo {
+  margin-left: 10%;
+  color: #291702; }
+
+table tr th {
+  /*estilo celdas encabezado*/
+  padding: 15px;
+  border: solid 1px; }
+
+table tr td {
+  /*estilo celdas cuerpo*/
+  padding: 15px;
+  border: hidden 1px; }
+
+.letraOscura {
+  color: beige; }
+
+#encabezadoTabla {
+  background-color: #352D39;
+  font-weight: bolder;
+  font-size: large;
+  color: #D5C7BC;
+  text-transform: uppercase; }
+
+iframe {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 95%;
+  margin-bottom: 30px; }
+
+/*Quien Soy*/
+/*Foto*/
+.imgQuienSoy {
+  width: 400px;
+  margin-top: 20px; }
+
+.textoQuienSoy {
+  width: 40%;
+  margin-top: 10px; }
+
+.imgTextoQuienSoy {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly; }
+
+@media (min-width: 769px) {
+  .menuResponsive {
+    display: none; }
+  .grid-header {
+    grid-template-areas: "logo . redes"
+ "logo . ."
+ "logo menu ."; }
+  .logoRedes {
+    width: 35px;
+    height: 35px;
+    border-radius: 30%;
+    padding: 1px;
+    transition: height 1s width 1s; }
+  .logoRedes:hover {
+    height: 50px;
+    width: 50px;
+    filter: opacity(70%); }
+  .bolivia {
+    animation-name: boliviaCaida;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-delay: 2s; }
+  @keyframes boliviaCaida {
+    0% {
+      transform: translateX(-1000%); }
+    100% { } }
+  .colombia {
+    animation-name: colombiaCaida;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-delay: 3s; }
+  @keyframes colombiaCaida {
+    0% {
+      transform: translateX(-1000%); }
+    100% { } }
+  .myanmar {
+    animation-name: myanmarCaida;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-delay: 4s; }
+  @keyframes myanmarCaida {
+    0% {
+      transform: translateX(-1000%); }
+    100% { } }
+  .vietnam {
+    animation-name: vietnamCaida;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-delay: 5s; }
+  @keyframes vietnamCaida {
+    0% {
+      transform: translateX(-1000%); }
+    100% { } }
+  .laos {
+    animation-name: laosCaida;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-delay: 6s; }
+  @keyframes laosaCaida {
+    0% {
+      transform: translateX(-1000%); }
+    100% { } }
+  .tailandia {
+    animation-name: tailandiaCaida;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-delay: 7s; }
+  @keyframes tailandiaCaida {
+    0% {
+      transform: translateX(-1000%); }
+    100% { } }
+  .rusia {
+    animation-name: rusiaCaida;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-delay: 8s; }
+  @keyframes rusiaCaida {
+    0% {
+      transform: translateX(-1000%); }
+    100% { } }
+  .india {
+    animation-name: rusiaCaida;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-delay: 9s; }
+  @keyframes rusiaCaida {
+    0% {
+      transform: translateX(-1000%); }
+    100% { } }
+  .maldivas {
+    animation-name: maldivasCaida;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-delay: 10s; }
+  @keyframes maldivasCaida {
+    0% {
+      transform: translateX(-1000%); }
+    100% { } }
+  .finlandia {
+    animation-name: finlandiaCaida;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-delay: 11s; }
+  @keyframes finlandiaCaida {
+    0% {
+      transform: translateX(-1000%); }
+    100% { } }
+  .estonia {
+    animation-name: estoniaCaida;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-delay: 12s; }
+  @keyframes estoniaCaida {
+    0% {
+      transform: translateX(-1000%); }
+    100% { } }
+  .canada {
+    animation-name: canadaCaida;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-delay: 13s; }
+  @keyframes canadaCaida {
+    0% {
+      transform: translateX(-1000%); }
+    100% { } }
+  .alemania {
+    animation-name: alemaniaCaida;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-delay: 14s; }
+  @keyframes alemaniaCaida {
+    0% {
+      transform: translateX(-1000%); }
+    100% { } }
+  .italia {
+    animation-name: italiaCaida;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-delay: 15s; }
+  @keyframes italiaCaida {
+    0% {
+      transform: translateX(-1000%); }
+    100% { } }
+  .espania {
+    animation-name: espaniaCaida;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-delay: 16s; }
+  @keyframes espaniaCaida {
+    0% {
+      transform: translateX(-1000%); }
+    100% { } }
+  .estiloTabla {
+    margin-left: 15%; } }
+
+@media (max-width: 768px) {
+  .estiloMenu {
+    display: none; }
+  .grid-header {
+    grid-template-areas: "pestaniaMenu redes"
+ "logo logo"; }
+  .logoRedes {
+    width: 25px;
+    height: 25px;
+    border-radius: 30%;
+    padding: 1px; }
+  .sacarEnMobile {
+    display: none; }
+  .imgTextoQuienSoy {
+    display: block; }
+  .textoQuienSoy {
+    width: 80%;
+    text-align: justify;
+    margin-left: 10%; }
+  h1 {
+    font-size: 60px;
+    padding-top: 5px;
+    padding-bottom: 5px; }
+  .rutaCarrousel {
+    display: block; }
+  .carrouselImagenes {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px; } }

@@ -1,0 +1,15 @@
+main img {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    border-style: solid;
+}
+
+.ofertas {
+    display: flex;
+    flex-direction: column;
+}
+
+main p {
+    margin: 20px;
+}
