@@ -71,7 +71,13 @@ while (indiqueDestino != 'ESC'){
     indiqueDestino = prompt('Ingrese otro o ESC para finalizar compra y te redirigiremos a la página de pago');
 }
 
-alert('El importe total de tu compra es de $ ' + importeAPagar);
+let totalCompra = document.createElement("div");
+totalCompra.innerHTML = "El Total de tu compra es $ " + importeAPagar;
+totalCompra.classList.add("importe");
+document.body.appendChild (totalCompra);
+
+
+// alert('El importe total de tu compra es de $ ' + importeAPagar);
 
 // carrito.forEach(i => {
 //     carroTotal += i.*.precio;
