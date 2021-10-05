@@ -35,6 +35,9 @@ berlin.impuestoPais ();
 
 // Comprar pasajes
 let importeAPagar = 0;
+const boton = document.getElementById("boton");
+
+boton.addEventListener('click', () => {
 
 let indiqueDestino = prompt('Ingresá el destino al que querés viajar - ESC para salir');   
 while (indiqueDestino != 'ESC'){
@@ -75,24 +78,5 @@ let totalCompra = document.createElement("div");
 totalCompra.innerHTML = "El Total de tu compra es $ " + importeAPagar;
 totalCompra.classList.add("importe");
 document.body.appendChild (totalCompra);
+});
 
-
-// alert('El importe total de tu compra es de $ ' + importeAPagar);
-
-// carrito.forEach(i => {
-//     carroTotal += i.*.precio;
-// });
-
-// console.log(carroTotal);
-
-// const carritoTotal = carrito.reduce((a,b) => a.precio + b.precio);
-// console.log(carritoTotal);
-
-// const carritoTotal = carrito.map(a, b => a.precio + b.precio);
-
-// console.log(carritoTotal);
-
-
-// if (ingreseDisco == 'ESC') {
-//     alert('Gracias por pasar, te esperamos la próxima')
-// }
