@@ -26,3 +26,18 @@ main p {
     border-radius: 10px;
     opacity: 80%;
 }
+
+#boton {
+    background-color: #291702;
+    color: antiquewhite;
+    margin: 5%;
+}
+
+.barraBusqueda__input {
+    width:500px;
+}
+
+.barraBusqueda {
+    display: flex;
+    margin: 5%
+}
