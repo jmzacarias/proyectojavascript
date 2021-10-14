@@ -8,7 +8,9 @@ let importeAPagar = 0;
 // // Creo la clase Pasajes
 class Pasajes{
 
-    constructor(destino, precio, stock) {
+    constructor(id, destino, precio, stock) {
+        this.id = id;
+
         this.destino = destino;
         
         this.precio = precio;
@@ -23,14 +25,14 @@ class Pasajes{
  }
 
 // // Creo el array Carrito que estará compuesto por los pasajes que el usuario desee comprar
-let carrito = [];
+const carrito = [];
 
 // //Creo mis objetos o productos
 
-const barcelona = new Pasajes('Barcelona', 95923, 23);
-const sanAndres = new Pasajes('San Andrés', 89563, 7);
-const toronto = new Pasajes('Toronto', 120325, 17);
-const berlin = new Pasajes('Berlin', 118699, 52);
+const barcelona = new Pasajes(1, 'Barcelona', 95923, 23);
+const sanAndres = new Pasajes(2, 'San Andrés', 89563, 7);
+const toronto = new Pasajes(3, 'Toronto', 120325, 17);
+const berlin = new Pasajes(4, 'Berlin', 118699, 52);
 
 let barcelonaImpuesto = barcelona.impuestoPais ();
 let torontoImpuesto = toronto.impuestoPais ();
@@ -50,47 +52,138 @@ const botonBarcelona = document.getElementById("js-pasajeBarcelona");
 const botonToronto = document.getElementById("js-pasajeToronto");
 const botonSanAndres = document.getElementById("js-pasajeSanAndres");
 const botonBerlin = document.getElementById("js-pasajeBerlin");
-const buttonFinalizar = document.getElementById("js-botonFinalizar");
+
+const textoCarrito = "Agregaste al carrito: \n";
+// const mostrarCarrito = ()=> {
+//         carrito.forEach((pasaje)=>{
+//         textoCarrito += "1 pasaje a " + pasaje.destino + "por $" + pasaje.precio + "\n"
+// });
+//  return textoCarrito;
+// };
 
  
 
 botonBarcelona.addEventListener('click', () => {
     carrito.push({barcelona});
     importeAPagar += barcelona.precio;
-    console.log(carrito);})
+    console.log(carrito);
+    if(carrito.length == 1) {
+        $('#js-carrito').append(` 
+        <div class="cart">
+             <h4>Carrito de compras:</h4>
+             <div id="js-agregados" class="agregados">
+                <p>- 1 pasaje a ${barcelona.destino} por $${barcelona.precio}</p>
+             </div>
+             <button class="botonFinalizar" id="js-botonFinalizar">Finalizar compra</button>
+        </div>
+        `);
+    } 
+    else if(carrito.length >= 2) {
+        $('#js-agregados').append(` 
+        <p>- 1 pasaje a ${barcelona.destino} por $${barcelona.precio}</p>
+        `);
+    }
+})
 
 botonToronto.addEventListener('click', () => {
     carrito.push({toronto});
     importeAPagar += toronto.precio;
-    console.log(carrito);})
+    console.log(carrito);
+    if(carrito.length == 1) {
+        $('#js-carrito').append(` 
+        <div class="cart">
+             <h4>Carrito de compras:</h4>
+             <div id="js-agregados" class="agregados">
+                <p>- 1 pasaje a ${toronto.destino} por $${toronto.precio}</p>
+             </div>
+             <button class="botonFinalizar" id="js-botonFinalizar">Finalizar compra</button>
+        </div>
+        `);
+    } 
+    else if(carrito.length >= 2) {
+        $('#js-agregados').append(` 
+        <p>- 1 pasaje a ${toronto.destino} por $${toronto.precio}</p>
+        `);
+    }
+})
+
 botonSanAndres.addEventListener('click', () => {
     carrito.push({sanAndres});
     importeAPagar += sanAndres.precio;
-    console.log(carrito);})
+    console.log(carrito);
+    if(carrito.length == 1) {
+        $('#js-carrito').append(` 
+        <div class="cart">
+             <h4>Carrito de compras:</h4>
+             <div id="js-agregados" class="agregados">
+                <p>- 1 pasaje a ${sanAndres.destino} por $${sanAndres.precio}</p>
+             </div>
+             <button class="botonFinalizar" id="js-botonFinalizar">Finalizar compra</button>
+        </div>
+        `);
+    } 
+    else if(carrito.length >= 2) {
+        $('#js-agregados').append(` 
+        <p>- 1 pasaje a ${sanAndres.destino} por $${sanAndres.precio}</p>
+        `);
+    }
+})
+
 botonBerlin.addEventListener('click', () => {
     carrito.push({berlin});
     importeAPagar += berlin.precio;
-    console.log(carrito);})
+    console.log(carrito);
+    // mostrarCarrito();
+    if(carrito.length == 1) {
+        $('#js-carrito').append(` 
+        <div class="cart">
+             <h4>Carrito de compras:</h4>
+             <div id="js-agregados" class="agregados">
+                <p>- 1 pasaje a ${berlin.destino} por $${berlin.precio}</p>
+             </div>
+             <button class="botonFinalizar" id="js-botonFinalizar">Finalizar compra</button>
+        </div>
+        `);
+    } 
+    else if(carrito.length >= 2) {
+        $('#js-agregados').append(` 
+        <p>- 1 pasaje a ${berlin.destino} por $${berlin.precio}</p>
+        `);
+    }    
+})
     
+let buttonFinalizar = document.getElementById("js-botonFinalizar");
 
 buttonFinalizar.addEventListener('click', ()=>{
     let totalCompra = document.createElement("div");
     totalCompra.innerHTML = "El Total de tu compra es $ " + importeAPagar;
     totalCompra.classList.add("importe");
     document.body.appendChild (totalCompra);
-})
+ })
 
 const guardarLocal = (productos,precio) => {localStorage.setItem(productos,precio)};
 
 guardarLocal('listaProductos',JSON.stringify(productos));
 
+
+// const agregarCarrito = () => {for(const producto of carrito){
+//     $('#js-carrito').append(` 
+//     <div class="cart">
+//          <h4>Pasajes agregados:</h4>
+//          <button class="botonFinalizar" id="js-botonFinalizar">Finalizar compra</button>
+//     </div>
+//     `);
+// }
+// }
+//     $(`js-pasaje${pasaje.destino}`).on('click', function(){
+//         $('#js-ofertas').append(`<p>Agregaste al carrito tu pasaje a ${producto.destino}</p>`);
+//     });
+// }
 // const insertInput = document.getElementById("js-insertInput");
 // const inputBusqueda = document.getElementById("js-barraBusqueda__input");
 // let buttonBusqueda = document.getElementById("js-botonBusqueda");
 
 // const inputBusquedaValor = inputBusqueda.value
-
-
 //Funcion para desplegar el input de selección pasaje al pulsar el boton (incluye en HTML elementos que no existen en el archivo en si y elimina otros)
 //  boton.addEventListener('click', () => {
 

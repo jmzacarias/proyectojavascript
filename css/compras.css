@@ -16,8 +16,8 @@ main p {
 
 .importe {
     position: fixed;
-    top: 30%;
-    left: 50%;
+    top: 10%;
+    left: 25%;
     width: 250px;
     padding: 50px;
     background-color: #291702;
@@ -40,4 +40,26 @@ main p {
 .barraBusqueda {
     display: flex;
     margin: 5%
+}
+
+.cart {
+    position: fixed;
+    top: 30%;
+    left: 60%;
+    width: fit-content;
+    background-color: whitesmoke;
+    color: rgb(47, 27, 3);
+    font-size: smaller;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #291702;
+    opacity: 80%;  
+
+}
+
+h4 {
+    font-size: 20px;
+}
+.agregados {
+    font-size: 15px;
 }
