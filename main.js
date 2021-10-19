@@ -77,6 +77,17 @@ botonBarcelona.addEventListener('click', () => {
              <button class="botonFinalizar" id="js-botonFinalizar">Finalizar compra</button>
         </div>
         `);
+        let buttonFinalizar = document.getElementById("js-botonFinalizar");
+
+        buttonFinalizar.addEventListener('click', ()=>{
+            let totalCompra = document.createElement("div");
+            totalCompra.innerHTML = "El Total de tu compra es $ " + importeAPagar;
+            totalCompra.classList.add("importe");
+            document.body.appendChild (totalCompra);
+            $(".importe").css("display", "none")
+            .slideDown(2000)
+            .delay(2000);
+ })
     } 
     else if(carrito.length >= 2) {
         $('#js-agregados').append(` 
@@ -99,6 +110,17 @@ botonToronto.addEventListener('click', () => {
              <button class="botonFinalizar" id="js-botonFinalizar">Finalizar compra</button>
         </div>
         `);
+        let buttonFinalizar = document.getElementById("js-botonFinalizar");
+
+        buttonFinalizar.addEventListener('click', ()=>{
+            let totalCompra = document.createElement("div");
+            totalCompra.innerHTML = "El Total de tu compra es $ " + importeAPagar;
+            totalCompra.classList.add("importe");
+            document.body.appendChild (totalCompra);
+            $(".importe").css("display", "none")
+            .slideDown(2000)
+            .delay(2000);
+ })
     } 
     else if(carrito.length >= 2) {
         $('#js-agregados').append(` 
@@ -121,6 +143,20 @@ botonSanAndres.addEventListener('click', () => {
              <button class="botonFinalizar" id="js-botonFinalizar">Finalizar compra</button>
         </div>
         `);
+        let buttonFinalizar = document.getElementById("js-botonFinalizar");
+
+        buttonFinalizar.addEventListener('click', ()=>{
+            let totalCompra = document.createElement("div");
+            totalCompra.innerHTML = "El Total de tu compra es $ " + importeAPagar;
+            totalCompra.classList.add("importe");
+            document.body.appendChild (totalCompra);
+            $(".importe").css("display", "none")
+            .slideDown(2000)
+            .delay(2000);
+ })
+                
+
+        
     } 
     else if(carrito.length >= 2) {
         $('#js-agregados').append(` 
@@ -144,6 +180,17 @@ botonBerlin.addEventListener('click', () => {
              <button class="botonFinalizar" id="js-botonFinalizar">Finalizar compra</button>
         </div>
         `);
+        let buttonFinalizar = document.getElementById("js-botonFinalizar");
+
+        buttonFinalizar.addEventListener('click', ()=>{
+            let totalCompra = document.createElement("div");
+            totalCompra.innerHTML = "El Total de tu compra es $ " + importeAPagar;
+            totalCompra.classList.add("importe");
+            document.body.appendChild (totalCompra);
+            $(".importe").css("display", "none")
+            .slideDown(2000)
+            .delay(2000);
+ })
     } 
     else if(carrito.length >= 2) {
         $('#js-agregados').append(` 
